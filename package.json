@@ -32,6 +32,7 @@
     "@emotion/styled": "^11.10.6",
     "@mui/material": "^5.11.9",
     "@reduxjs/toolkit": "^1.9.2",
+    "mobx-react-lite": "^3.4.0",
     "react-router-dom": "^5.3.0",
     "scss-coding-helpers": "^1.0.1"
   }

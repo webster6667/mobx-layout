@@ -17,3 +17,7 @@ export const AuthBtn = styled.img`
 export const Logo = styled.img`
   width: 40px;
 `;
+
+export const UserData = styled.span`
+     margin-right: 5px;
+`

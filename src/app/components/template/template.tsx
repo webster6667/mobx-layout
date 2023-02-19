@@ -12,5 +12,4 @@ export const Template = ({children}) => {
             {children}
         </Content>
         <Footer appName='zb-lesson' copyrightDate={new Date()} />
-    </>)
-}
+    </>)}

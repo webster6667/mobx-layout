@@ -39,7 +39,8 @@
       "@modal/*": ["src/shared/ui-kit/modal/*"],
       "@ui-kit/*": ["src/shared/ui-kit/*"],
 
-      "@hook": ["src/hooks/index.ts"]
+      "@hook": ["src/hooks/index.ts"],
+      "@store/*": ["src/store/*"]
     }
   },
   "include": [

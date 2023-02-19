@@ -1,18 +1,17 @@
 import React from 'react'
+import {observer} from "mobx-react-lite";
 import { Card1 } from "@ui-kit/cards/card-1"
 import Button from '@mui/material/Button';
 import {Container, Row, Col, Box} from "@grid"
+import { users } from '@store/users'
+import { profile } from '@store/profile'
 
 
-export const MainPage = () => {
-    const isAuth = true
-    const users = [
-        {id: 1, name: 'Jon'},
-        {id: 2, name: 'Ben'},
-        {id: 3, name: 'Alex'}
-    ]
-
-
+export const MainPage = observer(() => {
+    const addUserHandler = (e) => {
+              users.add()
+          }
+    
     return <div>
 
         <br/>
@@ -22,11 +21,11 @@ export const MainPage = () => {
                 mobile={{ offsetY: 20 }}
                 tablet={{ offsetX: 10 }}
             >
-                {users.map((user) => (
+                {users.userList.map((user) => (
                     <Col mobileSize={12}
                          tabletSize={4}
                     >
-                        <Card1 {...user} />
+                        <Card1 {...user} key={user.id} />
                     </Col>))
                 }
             </Row>
@@ -35,12 +34,13 @@ export const MainPage = () => {
 
         <br/>
 
-        <Box justifyContent='center' >
-            <Button variant="contained" >
+        {profile.isAuth && <Box justifyContent='center' >
+            <Button variant="contained" onClick={addUserHandler} >
                 Добавить юзера
             </Button>
-        </Box>
+        </Box>}
 
+        <br/>
 
     </div>
-}
+})
